@@ -5,7 +5,6 @@ document.getElementById('calculate-button').addEventListener('click', function (
     console.log(incomeAmount);
     // clear income value
     incomeInput.value = "";
-    console.log(incomeAmount);
 
     // foodValue
     const foodInput = document.getElementById('food-input');
@@ -14,7 +13,6 @@ document.getElementById('calculate-button').addEventListener('click', function (
     console.log(foodAmount);
     // clear food value
     foodInput.value = "";
-    console.log(foodAmount);
 
     // rentValue....
     const rentInput = document.getElementById('rent-input');
@@ -23,7 +21,6 @@ document.getElementById('calculate-button').addEventListener('click', function (
     console.log(rentAmount);
     // clear rent value
     rentInput.value = "";
-    console.log(rentAmount);
 
     // clothesValue......
     const clothesInput = document.getElementById('clothes-input');
@@ -32,7 +29,6 @@ document.getElementById('calculate-button').addEventListener('click', function (
     console.log(clothesAmount);
     // clear clothes value
     clothesInput.value = "";
-    console.log(clothesAmount);
 
     //update total expenses
     const totalExpenses = document.getElementById('total-expenses');
@@ -41,11 +37,10 @@ document.getElementById('calculate-button').addEventListener('click', function (
     totalExpenses.innerText = totalAmount + foodAmount + rentAmount + clothesAmount;
     // clear update total
     totalExpenses.value = "";
-    console.log(totalExpenses);
 
     // update total balance
     const totalBalance = document.getElementById('total-balance');
     const totalBalanceText = totalBalance.innerText;
     const balanceTotal = parseFloat(totalBalanceText);
-    totalBalance.innerText = incomeAmount - totalExpenses;
+    totalBalance.innerText = balanceTotal - totalExpenses;
 })
