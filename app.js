@@ -33,4 +33,19 @@ document.getElementById('calculate-button').addEventListener('click', function (
     // clear clothes value
     clothesInput.value = "";
     console.log(clothesAmount);
+
+    //update total expenses
+    const totalExpenses = document.getElementById('total-expenses');
+    const totalAmountText = totalExpenses.innerText;
+    const totalAmount = parseFloat(totalAmountText);
+    totalExpenses.innerText = totalAmount + foodAmount + rentAmount + clothesAmount;
+    // clear update total
+    totalExpenses.value = "";
+    console.log(totalExpenses);
+
+    // update total balance
+    const totalBalance = document.getElementById('total-balance');
+    const totalBalanceText = totalBalance.innerText;
+    const balanceTotal = parseFloat(totalBalanceText);
+    totalBalance.innerText = incomeAmount - totalExpenses;
 })
