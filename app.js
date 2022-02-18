@@ -20,6 +20,7 @@ function getTotalValue() {
 document.getElementById('calculate-button').addEventListener('click', function () {
     // incomeValue
     const incomeAmount = getInputValue();
+    console.log(incomeAmount)
     // foodValue.....
     const foodAmount = getTotalValue();
 
@@ -50,6 +51,7 @@ document.getElementById('calculate-button').addEventListener('click', function (
     // update total balance
     const totalBalance = document.getElementById('total-balance');
     const totalBalanceText = totalBalance.innerText;
-    const balanceTotal = parseFloat(totalBalanceText);
-    totalBalance.innerText = balanceTotal - totalExpenses;
+    console.log(incomeAmount, totalAmount)
+    totalBalance.innerText = incomeAmount - (totalAmount + foodAmount + rentAmount + clothesAmount);
+
 })
